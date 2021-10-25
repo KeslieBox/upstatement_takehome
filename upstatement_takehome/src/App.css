@@ -15,6 +15,26 @@ body {
   border-radius: 10px;
 }
 
+.carousel #left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  color: white
+}
+
+.carousel #right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 13%;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  color: white
+}
+
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
