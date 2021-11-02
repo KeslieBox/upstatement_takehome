@@ -15,7 +15,7 @@ export default function Carousel(){
 
     // if the next arrow is clicked & current slide is equal to the  
     // last index of CarouselData, set current slide to 0 
-    // otherwise, set current slide to the prev slide index minus 1
+    // otherwise, set current slide to the current index plus 1
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
     }
