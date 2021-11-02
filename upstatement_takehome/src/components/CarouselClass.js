@@ -12,14 +12,20 @@ class CarouselClass extends Component {
         }
     }
 
+    setCurrent = (updatedSlide) => {
+        this.setState(prev => {
+            return {...prev.current, updatedSlide}
+        })
+    }
+
     prevSlide = () => {
-        const current = this.state.current === 0 ? length - 1 : this.state.current - 1
-        this.setState({current})
+        const updatedSlide = this.state.current === 0 ? length - 1 : this.state.current - 1
+        this.setCurrent(updatedSlide)
     }
 
     nextSlide = () => {
-        const current = this.state.current === length - 1 ? 0 : this.state.current + 1
-        this.setState({current})
+        const updatedSlide = this.state.current === length - 1 ? 0 : this.state.current + 1
+        this.setCurrent(updatedSlide)
     }
 
     render() {
@@ -27,11 +33,11 @@ class CarouselClass extends Component {
             <div className='carousel'>
                 <FaArrowAltCircleLeft id='left-arrow' onClick={() => this.prevSlide()} size={40}/>
                 <FaArrowAltCircleRight id='right-arrow' onClick={() => this.nextSlide()} size={40}/>
-                {CarouselData.map((image, index) => {
+                {CarouselData.map(({imageUrl}, index) => {
                     return ( 
                         <div className={index === this.state.current ? 'slide active': 'slide'} key={index}>
                             { index === this.state.current && (
-                                <img src={image.url} className='images'/>
+                                <img src={imageUrl} className='images'/>
                             )}
                         </div>
                     )
