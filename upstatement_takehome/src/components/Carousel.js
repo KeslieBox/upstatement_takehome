@@ -27,7 +27,7 @@ export default function Carousel(){
     return (
         <div className='carousel'>
             <FaArrowAltCircleLeft id='left-arrow' onClick={prevSlide} size={40}/>
-            <FaArrowAltCircleRight id='right-arrow' onClick={prevSlide} size={40}/>
+            <FaArrowAltCircleRight id='right-arrow' onClick={nextSlide} size={40}/>
             {CarouselData.map((image, index) => {
                 return(
                     <div 
