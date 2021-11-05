@@ -7,15 +7,15 @@ export default function Carousel(){
     const length = CarouselData.length
   
     // if the left arrow is clicked & current slide index equals 0,
-    // set current slide to the last index of CarouselData 
-    // otherwise, set current slide to the index of the prev slide
+    // set current slide to the last index of CarouselData to move backthrough collection
+    // otherwise, subtract 1 from current slide index to move to previous image
     const prevSlide = () => {
         setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1)
     }
 
     // if the right arrow is clicked & current slide index is equal to the  
-    // last index of CarouselData, set current slide to 0 
-    // otherwise, set current slide to the prev slide index plus 1
+    // last index of CarouselData, set current slide to 0 to start carousel from beginning
+    // otherwise, add 1 to current slide index to move to next image
     const nextSlide = () => {
         setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1)
     }
