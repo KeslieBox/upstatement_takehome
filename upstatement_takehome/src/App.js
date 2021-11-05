@@ -4,8 +4,8 @@ import CarouselClass from './components/CarouselClass';
 
 function App() {
   return (
-      // <Carousel/>
-      <CarouselClass/>
+      <Carousel/>
+      // <CarouselClass/>
   );
 }
 

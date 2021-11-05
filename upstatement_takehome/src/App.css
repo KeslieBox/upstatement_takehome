@@ -37,7 +37,6 @@ body {
 
 .slide {
   opacity: 0;
-  transition-duration: 1s ease;
 }
 
 .slide.active {
